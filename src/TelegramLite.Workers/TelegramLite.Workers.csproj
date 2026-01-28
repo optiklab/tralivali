@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <ProjectReference Include="..\TelegramLite.Domain\TelegramLite.Domain.csproj" />
+    <ProjectReference Include="..\TelegramLite.Infrastructure\TelegramLite.Infrastructure.csproj" />
+    <ProjectReference Include="..\TelegramLite.Messaging\TelegramLite.Messaging.csproj" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+</Project>

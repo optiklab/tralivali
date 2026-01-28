@@ -1,0 +1,6 @@
+@TelegramLite.Api_HostAddress = http://localhost:5036
+
+GET {{TelegramLite.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
