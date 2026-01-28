@@ -81,3 +81,62 @@ Cargo.lock
 tmp/
 temp/
 *.tmp
+*.dll
+*.exe
+*.pdb
+*.userprefs
+*.usertasks
+*.DotSettings
+*.DotSettings.user
+project.lock.json
+project.fragment.lock.json
+artifacts/
+**/Properties/launchSettings.json
+.vs/
+.vscode/
+
+# Node
+node_modules/
+npm-debug.log
+yarn-error.log
+dist/
+.cache/
+.parcel-cache/
+.vite/
+
+# Rust
+target/
+Cargo.lock
+**/*.rs.bk
+
+# Environment files
+.env
+.env.local
+.env.production
+*.local
+
+# IDE
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Logs
+logs/
+*.log
+
+# Database
+*.db
+*.db-journal
+
+# Temp files
+tmp/
+temp/
+*.tmp
+
+# Azure
+.azure/
+
+# Docker
+docker-compose.override.yml

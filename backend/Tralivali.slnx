@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="Tralivali.API/Tralivali.API.csproj" />
+  <Project Path="Tralivali.Core/Tralivali.Core.csproj" />
+  <Project Path="Tralivali.Infrastructure/Tralivali.Infrastructure.csproj" />
+</Solution>
