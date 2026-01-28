@@ -3,7 +3,7 @@ namespace TelegramLite.Domain.Entities;
 /// <summary>
 /// Represents a file uploaded to the TelegramLite system.
 /// </summary>
-public class File
+public class FileAttachment
 {
     /// <summary>
     /// Gets or sets the unique identifier for the file.
