@@ -1,0 +1,23 @@
+# Rust
+ios/target/
+ios/Cargo.lock
+target/
+Cargo.lock
+*.rs.bk
+
+# Node
+node_modules/
+dist/
+build/
+*.log
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
