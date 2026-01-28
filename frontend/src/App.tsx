@@ -8,7 +8,7 @@ function App() {
   const [userId, setUserId] = useState('');
   const [username, setUsername] = useState('');
 
-  const handleLoginSuccess = (token: string, uid: string, uname: string) => {
+  const handleLoginSuccess = (_token: string, uid: string, uname: string) => {
     setIsAuthenticated(true);
     setUserId(uid);
     setUsername(uname);
