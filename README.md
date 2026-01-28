@@ -1,4 +1,6 @@
-# TelegramLite
+# TelegramLite OR Tralivali
+
+A self-hosted, invite-only messaging platform for family and friends with end-to-end encryption.
 
 A Telegram-like messaging application built with .NET 8, featuring end-to-end encryption, real-time messaging, and cloud deployment capabilities.
 
@@ -30,11 +32,6 @@ tralivali/
 ## Getting Started
 
 ### 1. Clone the Repository
-
-=======
-# Tralivali
-
-A self-hosted, invite-only messaging platform for family and friends with end-to-end encryption.
 
 ## Features
 
