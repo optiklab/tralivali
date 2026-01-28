@@ -2,12 +2,12 @@
 name = "tralivali-ios"
 version = "0.1.0"
 edition = "2021"
-description = "Tralivali iOS app built with Tauri 2.0"
+description = "Tralivali iOS app built with Tauri 2.1"
 authors = ["Tralivali Team"]
 license = "MIT"
 
 [dependencies]
-tauri = { version = "2.1", features = ["ios"] }
+tauri = "2.1"
 serde = { version = "1.0", features = ["derive"] }
 serde_json = "1.0"
 reqwest = { version = "0.12", features = ["json", "rustls-tls"] }

@@ -1,3 +1,18 @@
+# Rust
+ios/target/
+ios/Cargo.lock
+target/
+Cargo.lock
+*.rs.bk
+
+# Node
+node_modules/
+dist/
+build/
+*.log
+
+# IDE
+.vscode/
 # .NET
 bin/
 obj/
@@ -120,6 +135,10 @@ Cargo.lock
 *.swp
 *.swo
 *~
+
+# OS
+.DS_Store
+Thumbs.db
 .DS_Store
 
 # Logs
