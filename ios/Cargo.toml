@@ -2,7 +2,7 @@
 name = "tralivali-ios"
 version = "0.1.0"
 edition = "2021"
-description = "Tralivali iOS app built with Tauri 2.0"
+description = "Tralivali iOS app built with Tauri 2.1"
 authors = ["Tralivali Team"]
 license = "MIT"
 
