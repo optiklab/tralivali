@@ -1,0 +1,52 @@
+services:
+  mongodb:
+    image: mongo:7.0
+    container_name: tralivali-mongodb
+    ports:
+      - "27017:27017"
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: admin
+      MONGO_INITDB_ROOT_PASSWORD: password
+    volumes:
+      - mongodb_data:/data/db
+    networks:
+      - tralivali-network
+
+  rabbitmq:
+    image: rabbitmq:3.13-management
+    container_name: tralivali-rabbitmq
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    environment:
+      RABBITMQ_DEFAULT_USER: guest
+      RABBITMQ_DEFAULT_PASS: guest
+    volumes:
+      - rabbitmq_data:/var/lib/rabbitmq
+    networks:
+      - tralivali-network
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: tralivali-backend
+    ports:
+      - "5000:8080"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - MongoDb__ConnectionString=mongodb://admin:password@mongodb:27017
+      - RabbitMq__HostName=rabbitmq
+    depends_on:
+      - mongodb
+      - rabbitmq
+    networks:
+      - tralivali-network
+
+volumes:
+  mongodb_data:
+  rabbitmq_data:
+
+networks:
+  tralivali-network:
+    driver: bridge
