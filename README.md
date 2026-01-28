@@ -85,7 +85,7 @@ The API will be available at `http://localhost:5000` and `https://localhost:5001
 - ✅ Docker Compose for local development (MongoDB, RabbitMQ, Redis)
 - ✅ Domain entities with full XML documentation
 - ✅ MongoDB repository pattern with generic CRUD operations
-- ⏳ RabbitMQ infrastructure (Pending)
+- ✅ RabbitMQ infrastructure with resilience policies
 - ⏳ JWT authentication service (Pending)
 - ⏳ Magic-link authentication (Pending)
 - ⏳ Invite system with QR codes (Pending)

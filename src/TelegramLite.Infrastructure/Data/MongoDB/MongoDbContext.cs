@@ -10,6 +10,8 @@ namespace TelegramLite.Infrastructure.Data.MongoDB;
 public class MongoDbContext
 {
     private readonly IMongoDatabase _database;
+    private bool _indexesCreated;
+    private readonly object _indexLock = new();
 
     /// <summary>
     /// Initializes a new instance of the <see cref="MongoDbContext"/> class.
@@ -19,9 +21,23 @@ public class MongoDbContext
     {
         var client = new MongoClient(settings.Value.ConnectionString);
         _database = client.GetDatabase(settings.Value.DatabaseName);
-        
-        // Create indexes
-        CreateIndexes();
+    }
+
+    /// <summary>
+    /// Ensures indexes are created. This method is thread-safe and idempotent.
+    /// </summary>
+    public async Task EnsureIndexesAsync()
+    {
+        if (_indexesCreated) return;
+
+        lock (_indexLock)
+        {
+            if (_indexesCreated) return;
+            
+            // Create indexes synchronously in a locked context to prevent duplicate creation
+            CreateIndexes();
+            _indexesCreated = true;
+        }
     }
 
     /// <summary>
